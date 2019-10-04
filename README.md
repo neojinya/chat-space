@@ -59,7 +59,7 @@ Things you may want to cover:
 |title|string|null: false|
 
 ### Association
-- has_many :users, : :group_users
+- has_many :users, through: :group_users
 - has_many :messages
 
 
