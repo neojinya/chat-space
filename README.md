@@ -36,7 +36,7 @@ Things you may want to cover:
 
 
 
-### uesersテーブル
+### usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -46,7 +46,7 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### Association
-- has_many :group-users
+- has_many :groups, through: :group_users
 - has_many :messages
 
 
@@ -59,7 +59,7 @@ Things you may want to cover:
 |title|string|null: false|
 
 ### Association
-- has_many :group-users
+- has_many :users, : :group_users
 - has_many :messages
 
 
