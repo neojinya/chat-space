@@ -47,6 +47,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :groups, through: :group_users
+- has_many :group_users
 - has_many :messages
 
 
@@ -60,6 +61,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :users, through: :group_users
+- has_many :group_users
 - has_many :messages
 
 
