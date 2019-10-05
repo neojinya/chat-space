@@ -70,6 +70,7 @@ Things you may want to cover:
 |------|----|-------|
 |id|bigint|null: false|
 |user_id|bigint|null: false, foreign_key: true|
+|group_id|bigint|null: false, foreign_key: tru|
 |text|text||
 |image|string||
 
