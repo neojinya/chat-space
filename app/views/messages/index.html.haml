@@ -9,7 +9,7 @@
             = link_to "#" do
               %i.fa.fa-edit
           %li.side-header__box__menu__edit-user
-            %a{:href => "/users/99/edit"}
+            = link_to "#" do
               %i.fa.fa-cog
     .groups
       = link_to "#" do
@@ -20,7 +20,7 @@
   .chat-main
     .main-header
       .main-header__left-box
-        %h2.main-header__left-box__current-group{"data-group_id" => "121"}
+        %h2.main-header__left-box__current-group{"data-group_id": "121"}
           sample
         %ul.main-header__left-box__member-list
           Member：
@@ -30,24 +30,24 @@
       = link_to "#" do
         .main-header__edit-btn Edit
     .messages
-      .message{"data-message_id" => "152"}
+      .message{"data-message_id": "152"}
         .message__upper-info
           %p.message__upper-info__talker seo
           %p.message__upper-info__date 2019/08/22(Thu) 11:12:41
         %p.message__text Hello world!
-      .message{"data-message_id" => "153"}
+      .message{"data-message_id": "153"}
         .message__upper-info
           %p.message__upper-info__talker neko
           %p.message__upper-info__date 2019/08/22(Thu) 11:13:12
         %p.message__text Good bye world!
       
     .form
-      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/121/messages", :enctype => "multipart/form-data", :method => "post"}
-        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-        %input{:name => "authenticity_token", :type => "hidden", :value => "K56tf13AO0nvk8hYwpJQ6PVS1rqFsSxYtJrsiLu7R2JHjISyeiL3xZ+23T5G/ewvVO1Anm8+slofJd67LiYy0A=="}/
+      %form#new_message.new_message{"accept-charset": "UTF-8", action: "/groups/121/messages", enctype: "multipart/form-data", method: "post"}
+        %input{name: "utf8", type: "hidden", value: "✓"}/
+        %input{name: "authenticity_token", type: "hidden", value: "K56tf13AO0nvk8hYwpJQ6PVS1rqFsSxYtJrsiLu7R2JHjISyeiL3xZ+23T5G/ewvVO1Anm8+slofJd67LiYy0A=="}/
         .input-box
-          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-          %label.input-box__image{:for => "message_image"}
+          %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
+          %label.input-box__image{for: "message_image"}
             %i.fa.fa-image
-            %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-        %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+            %input#message_image.input-box__image__file{name: "message[image]", type: "file"}/
+        %input.submit-btn{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
