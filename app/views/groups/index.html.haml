@@ -4,20 +4,8 @@
     .side-header
       .side-header__box
         = render partial: "shared/side_header"
-        -# %p.side-header__box__user-name SEO
-        -# %ul.side-header__box__menu
-        -#   %li.side-header__box__menu__new-group
-        -#     = link_to "#" do
-        -#       %i.fa.fa-edit
-        -#   %li.side-header__box__menu__edit-user
-        -#     = link_to "#" do
-        -#       %i.fa.fa-cog
     .groups
       = render partial: "shared/side_bar", locals: { group: @group}
-      -# = link_to "#" do
-      -#   .group
-      -#     %p.group__group-name sample
-      -#     %p.group__latest-message Good bye work
       
   .chat-main
     .main-header
