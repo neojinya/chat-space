@@ -8,13 +8,14 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       render :edit
+    end
   end
 
-  def flash
-    flash[:succcess] = アカウントが登録されました。
-    flash[:rogin_m] = ログインしました。
-    flash[:rogout_m] = ログインまたは登録が必要です。
-  end
+  # def flash
+  #   flash[:success] = アカウントが登録されました。
+  #   flash[:rogin_m] = ログインしました。
+  #   flash[:rogout_m] = ログインまたは登録が必要です。
+  # end
 
 
   private
