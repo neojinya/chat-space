@@ -1,24 +1,8 @@
 .flash-box
 .wrapper
   .chat-side
-    .side-header
-      .side-header__box
-        = render partial: "shared/side_header"
-        -# %p.side-header__box__user-name SEO
-        -# %ul.side-header__box__menu
-        -#   %li.side-header__box__menu__new-group
-        -#     = link_to "#" do
-        -#       %i.fa.fa-edit
-        -#   %li.side-header__box__menu__edit-user
-        -#     = link_to "#" do
-        -#       %i.fa.fa-cog
-    .groups
-      = render partial: "shared/side_bar", locals: { group: @group}
-      -# = link_to "#" do
-      -#   .group
-      -#     %p.group__group-name sample
-      -#     %p.group__latest-message Good bye work
-      
+    = render partial: "shared/side_bar"
+
   .chat-main
     .main-header
       .main-header__left-box
@@ -32,31 +16,28 @@
       = link_to "#" do
         .main-header__edit-btn Edit
     .messages
-      .message{"data-message_id": "152"}
-        .message__upper-info
-          %p.message__upper-info__talker seo
-          %p.message__upper-info__date 2019/08/22(Thu) 11:12:41
-        %p.message__text Hello world!
-      .message{"data-message_id": "153"}
-        .message__upper-info
-          %p.message__upper-info__talker neko
-          %p.message__upper-info__date 2019/08/22(Thu) 11:13:12
-        %p.message__text Good bye world!
+      = render @messages
+    -# .messages
+    -#   .message{"data-message_id": "152"}
+    -#     .message__upper-info
+    -#       %p.message__upper-info__talker seo
+    -#       %p.message__upper-info__date 2019/08/22(Thu) 11:12:41
+    -#     %p.message__text Hello world!
+    -#   .message{"data-message_id": "153"}
+    -#     .message__upper-info
+    -#       %p.message__upper-info__talker neko
+    -#       %p.message__upper-info__date 2019/08/22(Thu) 11:13:12
+    -#     %p.message__text Good bye world!
       
     .form
-      -# = form_for [@group, @message] do |f|
-      -#   = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      -#   .form__mask
-      -#     = f.label :image, class: 'form__mask__image' do
-      -#       = fa_icon 'picture-o', class: 'icon'
-      -#       = f.file_field :image, class: 'hidden'
-      -#     = f.submit 'Send', class: 'form__submit'
-      %form#new_message.new_message{"accept-charset": "UTF-8", action: "/groups/121/messages", enctype: "multipart/form-data", method: "post"}
-        %input{name: "utf8", type: "hidden", value: "✓"}/
-        %input{name: "authenticity_token", type: "hidden", value: "K56tf13AO0nvk8hYwpJQ6PVS1rqFsSxYtJrsiLu7R2JHjISyeiL3xZ+23T5G/ewvVO1Anm8+slofJd67LiYy0A=="}/
+      .new_message
+      = form_for [@group, @message] do |f|
         .input-box
-          %input#message_content.input-box__text{name: "message[content]", placeholder: "type a message", type: "text"}/
-          %label.input-box__image{for: "message_image"}
-            %i.fa.fa-image
-            %input#message_image.input-box__image__file{name: "message[image]", type: "file"}/
-        %input.submit-btn{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}/
+          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+          .form__mask
+            %label 
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+
+        -# :image, class: 'form__mask__image' do

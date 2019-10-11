@@ -5,24 +5,51 @@
   display: flex;
   align-items: center;
   padding: 0 20px;
-  &__box{
+  .side-header__box{
     display: flex;
     justify-content: space-between;
     width: 100%;
     font-weight: bold;
-    &__user-name{
-      margin: 0;
-      padding: 0;
+    .side-bar{
+     width: 100%;
+      .header{
+        width: 100%;
+        .header__name{
+          margin: 0;
+          padding: 0;
+          display: inline;
+          float: left;
+          font-weight: bold;
+        }
+        .header__lists{
+          display: flex;
+          color: $font-color;
+          float: right;
+            li.list{
+              margin-left: 0.3rem;
+            }
+            li.list{
+              margin-left: 0.3rem;
+            }
+        }
+      }
     }
-    &__menu{
-      display: flex;
-      color: $font-color;
-        &__new-group{
-          margin-left: 0.3rem;
-        }
-        &__edit-user{
-          margin-left: 0.3rem;
-        }
+  }
+}
+.groups{
+  height: calc(100% - 120px);
+  background-color: #2f3e51;
+  padding: 20px 20px 0;
+  overflow: scroll;
+  .group{
+    margin-bottom: 40px;
+    color:$font-color;
+    &__group-name{
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+    &__latest-message{
+      font-size: 11px;
     }
   }
 }

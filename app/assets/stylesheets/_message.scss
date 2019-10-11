@@ -44,23 +44,23 @@ html{
          }
        }
      }
-     .groups{
-       height: calc(100% - 120px);
-       background-color: #2f3e51;
-       padding: 20px 20px 0;
-       overflow: scroll;
-       .group{
-         margin-bottom: 40px;
-         color:$font-color;
-         &__group-name{
-           font-size: 15px;
-           margin-bottom: 5px;
-         }
-         &__latest-message{
-           font-size: 11px;
-         }
-       }
-     }
+    //  .groups{
+    //    height: calc(100% - 120px);
+    //    background-color: #2f3e51;
+    //    padding: 20px 20px 0;
+    //    overflow: scroll;
+    //    .group{
+    //      margin-bottom: 40px;
+    //      color:$font-color;
+    //      &__group-name{
+    //        font-size: 15px;
+    //        margin-bottom: 5px;
+    //      }
+    //      &__latest-message{
+    //        font-size: 11px;
+    //      }
+    //    }
+    //  }
  }
     .chat-main{
       height: 100%;
@@ -142,14 +142,14 @@ html{
         .input-box{
           position: relative;
           width: 100%;
-          &__text{
+          .form__message{
             height: 50px;
             width: calc(100% - 50px);
             padding: 0 40px 0 10px;
             color: #434a54;
             border-style: none;
           }
-          &__image{
+          .form__mask{
             font-size: 1.3rem;
             position: absolute;
             top: 10px;
@@ -160,7 +160,7 @@ html{
             }
           }
         }
-        .submit-btn{
+        .form__submit{
           width: 100px;
           height: 50px;
           padding: 0 30px;
@@ -272,3 +272,6 @@ html{
         }
       }
       }
+.hidden{
+  display: none ;
+}
