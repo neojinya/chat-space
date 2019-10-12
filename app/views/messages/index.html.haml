@@ -17,17 +17,6 @@
         .main-header__edit-btn Edit
     .messages
       = render @messages
-    -# .messages
-    -#   .message{"data-message_id": "152"}
-    -#     .message__upper-info
-    -#       %p.message__upper-info__talker seo
-    -#       %p.message__upper-info__date 2019/08/22(Thu) 11:12:41
-    -#     %p.message__text Hello world!
-    -#   .message{"data-message_id": "153"}
-    -#     .message__upper-info
-    -#       %p.message__upper-info__talker neko
-    -#       %p.message__upper-info__date 2019/08/22(Thu) 11:13:12
-    -#     %p.message__text Good bye world!
       
     .form
       .new_message
@@ -40,4 +29,3 @@
               = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
 
-        -# :image, class: 'form__mask__image' do
