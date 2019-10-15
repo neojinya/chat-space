@@ -11,13 +11,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # def flash
-  #   flash[:success] = アカウントが登録されました。
-  #   flash[:rogin_m] = ログインしました。
-  #   flash[:rogout_m] = ログインまたは登録が必要です。
-  # end
-
-
   private
 
   def user_params
